@@ -1,0 +1,3 @@
+packages:
+  - local: marts/marketplace_others
+  - local: marts/marketplace_sp
