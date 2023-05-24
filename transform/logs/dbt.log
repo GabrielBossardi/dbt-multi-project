@@ -1,0 +1,78 @@
+[0m19:27:16.525290 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107fcec50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1100d1250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1100d1bd0>]}
+
+
+============================== 19:27:16.527662 | b4d449b8-4ff2-4b3f-b5fe-5b5caf2d8e61 ==============================
+[0m19:27:16.527662 [info ] [MainThread]: Running with dbt=1.5.0
+[0m19:27:16.527982 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/Users/gabrielbossardi/.dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m19:27:34.527505 [debug] [MainThread]: Starter project path: /Users/gabrielbossardi/miniconda3/envs/dbt-multi/lib/python3.11/site-packages/dbt/include/starter_project
+[0m19:27:47.037430 [info ] [MainThread]: 
+Your new dbt project "base" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m19:27:47.038337 [debug] [MainThread]: Command `dbt init` succeeded at 19:27:47.038187 after 30.53 seconds
+[0m19:27:47.038690 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104877d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104922d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1049239d0>]}
+[0m19:27:47.039026 [debug] [MainThread]: Flushing usage events
+[0m19:27:54.317516 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108227490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10825d190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10825dad0>]}
+
+
+============================== 19:27:54.320008 | 149ba053-7a6e-44c2-959c-78c3ca7ba378 ==============================
+[0m19:27:54.320008 [info ] [MainThread]: Running with dbt=1.5.0
+[0m19:27:54.320332 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/Users/gabrielbossardi/.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m19:34:44.971683 [debug] [MainThread]: Starter project path: /Users/gabrielbossardi/miniconda3/envs/dbt-multi/lib/python3.11/site-packages/dbt/include/starter_project
+[0m19:34:48.021880 [info ] [MainThread]: 
+Your new dbt project "marketplace_sp" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m19:34:48.022787 [debug] [MainThread]: Command `dbt init` succeeded at 19:34:48.022613 after 413.56 seconds
+[0m19:34:48.023218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10515fd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105208f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105208ed0>]}
+[0m19:34:48.023705 [debug] [MainThread]: Flushing usage events
+[0m19:34:51.784481 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063fe950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1064175d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10642d950>]}
+
+
+============================== 19:34:51.786911 | 403b51bd-6c15-4570-96b1-e2d244339cb3 ==============================
+[0m19:34:51.786911 [info ] [MainThread]: Running with dbt=1.5.0
+[0m19:34:51.787244 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/gabrielbossardi/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m19:35:06.787138 [debug] [MainThread]: Starter project path: /Users/gabrielbossardi/miniconda3/envs/dbt-multi/lib/python3.11/site-packages/dbt/include/starter_project
+[0m19:35:10.525475 [info ] [MainThread]: 
+Your new dbt project "marketplace_others" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m19:35:10.526250 [debug] [MainThread]: Command `dbt init` succeeded at 19:35:10.526096 after 18.76 seconds
+[0m19:35:10.526566 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10332fd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055a2910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103287f10>]}
+[0m19:35:10.526877 [debug] [MainThread]: Flushing usage events
