@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: obt_payment_type_by_sp_state
+    description: This table keeps the data about paymet_type by state of São Paulo state records.
+    columns:
+      - name: payment_type
+        description: Payment type.
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['boleto', 'debit_card', 'voucher', 'credit_card', 'not_defined']
+      - name: customer_state
+        description: Customer state.
+        tests:
+          - not_null
+      - name: order_quantity
+        description: Quantity orders.
+        tests:
+          - not_null
+      - name: avg_payment_value
+        description: Average of payment value.
+        tests:
+          - not_null
