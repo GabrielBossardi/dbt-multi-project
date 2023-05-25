@@ -65,21 +65,21 @@ Note that, for didactic reasons, the seed tables will be considered as sources a
 
 4. Execute all models:
    ```shell
-   dbt seed --profiles-dir ../
+   dbt run --profiles-dir ../
    ```
 5. Execute only the models from the "base" project:
    ```shell
-   dbt seed -s tag:base --profiles-dir ../
+   dbt run -s tag:base --profiles-dir ../
    ```
 
 6. Execute only the models from the "marketplace_others" project:
    ```shell
-   dbt seed -s tag:marketplace_others --profiles-dir ../
+   dbt run -s tag:marketplace_others --profiles-dir ../
    ```
 
 7. Execute only the models from the "marketplace_sp" project:
    ```shell
-   dbt seed -s tag:marketplace_sp --profiles-dir ../
+   dbt run -s tag:marketplace_sp --profiles-dir ../
    ```
 
 8. Execute all models:
