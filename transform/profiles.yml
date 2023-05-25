@@ -9,6 +9,6 @@ base:
       user: "{{ env_var('POSTGRES_USER', 'postgres') }}"
       pass: "{{ env_var('POSTGRES_PASSWORD', 'postgres') }}"
       dbname: "{{ env_var('POSTGRES_DB', 'postgres') }}"
-      schema: mart
+      schema: puglic
 
   target: dev

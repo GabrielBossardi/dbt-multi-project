@@ -21,13 +21,13 @@ models:
     +tags: ["marketplace_sp"]
 
     bronze:
-      schema: bronze
+      +schema: bronze
 
     silver:
-      schema: silver
+      +schema: silver
 
     gold:
-      schema: gold
+      +schema: gold
 
 seeds:
   +schema: bronze
