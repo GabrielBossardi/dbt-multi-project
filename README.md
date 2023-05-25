@@ -16,13 +16,6 @@ Follow the steps below to get the project up and running on your local machine.
 - Docker version 20.10.24 or higher
 - Poetry version 1.4.2 or higher
 
-### Installation and Environment Config
-
-To install and set up the project, run the script below (inside of the virtual environment):
-```
-python setup.py
-```
-
 ### Installation and Setup
 
 1. Clone the repository:
