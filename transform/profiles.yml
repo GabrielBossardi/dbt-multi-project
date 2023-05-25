@@ -3,8 +3,8 @@ base:
 
     dev:
       type: postgres
-      threads: "{{ env_var('DBT_THREADS', 1) | as_number }}"
-      host: "{{ env_var('POSTGRES_HOST', localhost) }}"
+      threads: "{{ env_var('DBT_THREADS', 1) | int }}"
+      host: "{{ env_var('POSTGRES_HOST', 'localhost') }}"
       port: "{{ env_var('POSTGRES_PORT', 5432) | as_number }}"
       user: "{{ env_var('POSTGRES_USER', 'postgres') }}"
       pass: "{{ env_var('POSTGRES_PASSWORD', 'postgres') }}"
