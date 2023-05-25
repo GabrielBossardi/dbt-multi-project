@@ -47,11 +47,14 @@ Follow the steps below to get the project up and running on your local machine.
 
 To explore and analyze the data using dbt, follow these steps:
 
-1. Ensure that you have completed the [Installation](#installation-and-setup) steps mentioned above.
-
-2. Navigate to the project directory:
+1. Navigate to the project directory:
    ```shell
    cd transform/base/
+   ```
+
+2. Install dependencies:
+   ```shell
+   dbt deps --profiles-dir ../
    ```
 
 3. Seed the database with initial data:
