@@ -19,11 +19,14 @@ models:
   base:
     +materialized: table
 
-    staging:
-      schema: stg
+    bronze:
+      schema: bronze
 
-    core:
-      schema: core
+    silver:
+      schema: silver
+
+    gold:
+      schema: gold
 
 seeds:
   +schema: bronze
