@@ -1,0 +1,35 @@
+name: 'base'
+version: '1.0.0'
+config-version: 2
+
+profile: 'base'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:         # directories to be removed by `dbt clean`
+  - "target"
+  - "dbt_packages"
+
+models:
+  base:
+    +materialized: table
+    +tags: ["base"]
+
+    bronze:
+      +schema: bronze
+
+    silver:
+      +schema: silver
+
+    gold:
+      +schema: gold
+
+seeds:
+  +schema: bronze
+  +quote_columns: false
+  +full_refresh: true
