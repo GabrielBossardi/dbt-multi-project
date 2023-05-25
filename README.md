@@ -38,6 +38,11 @@ Follow the steps below to get the project up and running on your local machine.
    docker-compose up -d
    ```
 
+5. Set environment variables
+   ```shell
+   source .env
+   ```
+
 ### dbt Set Up and Exploration
 
 To explore and analyze the data using dbt, follow these steps:
