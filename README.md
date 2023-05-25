@@ -44,10 +44,6 @@ python setup.py
    ```shell
    docker-compose up -d
    ```
-5. Set up the dbt profiles directory:
-   ```shell
-   export DBT_PROFILES_DIR=./transform
-   ```
 
 ### dbt Set Up and Exploration
 
