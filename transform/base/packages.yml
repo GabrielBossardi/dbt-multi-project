@@ -1,3 +1,0 @@
-packages:
-  - local: data_marts/marketplace_others
-  - local: data_marts/marketplace_sp
