@@ -24,7 +24,7 @@ models:
       +schema: bronze
 
     silver:
-      +schema: silver
+      +schema: silver_sp
 
     gold:
       +schema: gold
