@@ -2,9 +2,37 @@
 
 This project aims to demonstrate a dbt environment with multiple projects. It consists of a base project, which serves as a contract and should not be modified, and child projects that function as data marts.
 
-The base project contains all the sales data, which is considered contractual and remains unchanged. The child projects, named "marketplace_others" and "marketplace_sp," focus on sales data from all states in Brazil except São Paulo and sales data specifically from São Paulo, respectively.
+The base project contains all the sales data, which is considered contractual and remains unchanged. The child projects, named "marketplace_others" and "marketplace_sp", focus on sales data from all states in Brazil except São Paulo and sales data specifically from São Paulo, respectively.
 
 By showcasing this project structure, we highlight the flexibility and scalability of dbt in managing different aspects of an analytics or data engineering workflow. The separation into base and data mart projects allows for modularity, easy maintenance, and the ability to analyze specific subsets of data without affecting the core contract data.
+
+## High-level architecture
+
+
+### Contracts with outside world:
+
+**Path:** `base/models/`
+
+**Details:**
+
+- We cannot run children’s models.
+- It'll be clean without stage models.
+
+### Stages with models & analyses:
+
+**Path:**
+- `base/data_marts/marketplace_others/models/`
+- `base/data_marts/marketplace_others/analyses/`
+- `base/data_marts/marketplace_sp/models/`
+- `base/data_marts/marketplace_sp/analyses/`
+
+**Details:**
+- It'll be clean without mart (contract) and other stage models.
+- There will be no risks of accidentally running `marketplace_others` models from the `marketplace_sp` project and vice-versa.
+- There will be no name conflicts between stages.
+- There will be name conflicts with the `base` (contract) project.
+- Each stage is organized in a separate folder, avoiding mass and allowing e ergonomic work.
+- Each model can be created on a different database schema if necessary.
 
 ## Getting Started
 
@@ -86,8 +114,9 @@ Note that, for didactic reasons, the seed tables will be considered as sources a
    dbt docs generate --profiles-dir ../
    ```
 
-8. Generate project documentation:
+8. Generate child project documentation:
    ```shell
+   cd data_marts/marketplace_others/
    dbt docs generate --profiles-dir ../
    ```
 
