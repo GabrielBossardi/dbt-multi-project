@@ -9,22 +9,22 @@ By showcasing this project structure, we highlight the flexibility and scalabili
 ## High-level architecture
 
 
-### Contracts with outside world:
+### Contracts with outside world (parent):
 
-**Path:** `base/models/`
+**Path:** `transform/base/models/`
 
 **Details:**
 
 - We cannot run children’s models.
 - It'll be clean without stage models.
 
-### Stages with models & analyses:
+### Stages with models & analyses (children):
 
 **Path:**
-- `base/data_marts/marketplace_others/models/`
-- `base/data_marts/marketplace_others/analyses/`
-- `base/data_marts/marketplace_sp/models/`
-- `base/data_marts/marketplace_sp/analyses/`
+- `transform/marketplace_others/models/`
+- `transform/marketplace_others/analyses/`
+- `transform/marketplace_sp/models/`
+- `transform/marketplace_sp/analyses/`
 
 **Details:**
 - It'll be clean without mart (contract) and other stage models.
@@ -32,7 +32,6 @@ By showcasing this project structure, we highlight the flexibility and scalabili
 - There will be no name conflicts between stages.
 - There will be name conflicts with the `base` (contract) project.
 - Each stage is organized in a separate folder, avoiding mass and allowing e ergonomic work.
-- Each model can be created on a different database schema if necessary.
 
 ## Getting Started
 
@@ -75,57 +74,65 @@ Follow the steps below to get the project up and running on your local machine.
 
 To explore and analyze the data using dbt, follow these steps:
 
-1. Navigate to the project directory:
+1. Install parent (base) into child (marketplace_others):
    ```shell
-   cd transform/base/
+   cd transform/marketplace_others
+   dbt deps
    ```
 
-2. Seed the database with initial data:
+2. Install parent (base) into child (marketplace_sp):
    ```shell
+   cd ../marketplace_sp
+   dbt deps
+   ```
+
+3. Seed the database with initial data in the base project:
+   ```shell
+   cd ../base
    dbt seed --profiles-dir ../
    ```
 Note that, for didactic reasons, the seed tables will be considered as sources and not as models. Therefore, these tables will be referenced with the `source` macro and not with `ref`.
 
-3. Execute all models of "base":
+4. Execute all models of "base":
    ```shell
    dbt run --profiles-dir ../
    ```
 
-4. Execute only the models from the "marketplace_others" project:
+5. Execute only the models from the "marketplace_others" project:
    ```shell
-   cd data_marts/marketplace_others/
-   dbt run -s tag:marketplace_others --profiles-dir ../../../
+   cd ../marketplace_others/
+   dbt run -s tag:marketplace_others --profiles-dir ../
    ```
 
-5. Execute only the models from the "marketplace_sp" project:
+6. Execute only the models from the "marketplace_sp" project:
    ```shell
    cd ../marketplace_sp/
-   dbt run -s tag:marketplace_sp --profiles-dir ../../../
+   dbt run -s tag:marketplace_sp --profiles-dir ../
    ```
 
-6. Execute all models of "base":
+7. Execute all models of "base":
    ```shell
-   cd ../../
+   cd ../base
    dbt test --profiles-dir ../
    ```
 
-7. Generate project documentation:
+8. Generate project documentation:
    ```shell
    dbt docs generate --profiles-dir ../
    ```
 
-8. Generate child project documentation:
+9. Generate child project documentation:
    ```shell
-   cd data_marts/marketplace_others/
+   cd ../marketplace_others/
    dbt docs generate --profiles-dir ../
    ```
 
-9. Serve project documentation:
+10. Serve project documentation:
    ```shell
-   dbt docs serve --profiles-dir ../
+   dbt docs serve 8081 --profiles-dir ../
    ```
 
-10. Explore the projects
+11. Explore the projects
 Feel free to explore the project and experiment with its features.
 
 ## License
